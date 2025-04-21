@@ -1,0 +1,15 @@
+
+#     Realizar un programa en Python que permita la manipulación de datos enteros en una matriz cuadrada de 5x5 y que, para ello, muestre al usuario un menú con las siguientes opciones:
+
+# Cargar matriz manualmente (Esta función debe solicitar al usuario el número a guardar en cada posición de la matriz).
+# Cargar la matriz de forma automática (Esta función debe cargar todas las posiciones de la matriz con números aleatorios).
+# Mostrar matriz (Debe imprimir en formato de tabla los datos cargados en la matriz).
+# Modificar matriz (Debe solicitar al usuario la posición a modificar y, en caso de estar dentro de los límites de la matriz, pedir el nuevo valor numérico a guardar en dicha posición).
+# Mostrar el promedio de la diagonal principal.
+# Mostrar el menor de los números de la contradiagonal
+# Salir del programa
+# A tener en cuenta:
+
+# El programa debe permitir continuar ejecutando cualquiera de las funcionalidades siempre que la opción seleccionada no sea 7 (utilicen un ciclo para ello)
+# Cada funcionalidad debe ser codificada en una función por separado (recuerden separar responsabilidades)
+# Recuerden validar las entradas del usuario para evitar erroes en tiempo de ejecución
