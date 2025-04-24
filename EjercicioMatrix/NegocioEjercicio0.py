@@ -1,5 +1,5 @@
 
-
+import time
 import MenuEjercicio0 as menu
 import UtilitiesEjercicio0 as utils
 from UtilitiesEjercicio0 import matrix0,diagonal
@@ -23,4 +23,6 @@ while decision != 7:
     elif decision == 6:
         matrizMuestra = utils.menorDiagonal(matrix0)
         print(f"la matriz era:\n {matrix0}")
+    time.sleep(3)
     decision = menu.menu()
+    time.sleep(3)

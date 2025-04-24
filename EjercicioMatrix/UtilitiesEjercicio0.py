@@ -4,7 +4,7 @@ import random as rndm
 
 
 
-matrix0 = np.zeros([3,3],dtype=int)
+matrix0 = np.zeros([5,5],dtype=int)
 #Aca empiezan las utilidades
 diagonal  = np.diag(matrix0)
 def CargaManual ():
@@ -95,11 +95,15 @@ def menorDiagonal (matrix0):  #es el de la contradiagonal lpm
 
 #  print("type(matrix0[0]):", type(matrix0[0]))
 
+
+ 
+
  ultimoValorFila = (len(matrix0)-1)
  ultimoValorColumna = (len(matrix0[0])-1)
  contradiagonal = []
  
- acu = 0
+ acuCol = 0
+ acuFil = 0
  for i in range (0,len(matrix0)):  #fila
         
         for j in range (0,len(matrix0[0])): #columna
@@ -111,26 +115,68 @@ def menorDiagonal (matrix0):  #es el de la contradiagonal lpm
 
         
             if i==0 and j == ultimoValorColumna:
-                ultimoValorFila=i
-                ultimoValorColumna=j 
-                contradiagonal.append( matrix0[i][ultimoValorColumna])
-            elif i == ultimoValorFila+1 and j == ultimoValorColumna-1:
+
+
                 ultimoValorFila=i
                 ultimoValorColumna=j
-                contradiagonal.append(matrix0[i][j])
+                contradiagonal.append( matrix0[i][ultimoValorColumna])
+                
+                ultimoValorColumna-=1
+                ultimoValorFila+=1
+                 
+                
+            elif i == ultimoValorFila and j == ultimoValorColumna:
+                ultimoValorFila=i
+                ultimoValorColumna=j
 
-            elif i == ultimoValorFila+2 and j == ultimoValorColumna-2:
+                contradiagonal.append( matrix0[i][ultimoValorColumna])
+
+                ultimoValorColumna-=1
+                ultimoValorFila+=1
+
+                
+
+            elif i == ultimoValorFila and j == ultimoValorColumna:
                 
                 ultimoValorFila=i
-                ultimoValorColumna=j                
-                
-                contradiagonal.append( matrix0[i][j])
-#  list(contradiagonal)
- conversorInt(contradiagonal)
+                ultimoValorColumna=j
 
- 
+                contradiagonal.append( matrix0[i][ultimoValorColumna])
+
+                ultimoValorColumna-=1
+                ultimoValorFila+=1                
+                
+                
+
+            elif i == ultimoValorFila and j == ultimoValorColumna:
+                
+                ultimoValorFila=i
+                ultimoValorColumna=j
+
+                contradiagonal.append( matrix0[i][j])
+
+                ultimoValorColumna-=1
+                ultimoValorFila+=1                
+                
+                            
+            elif i == ultimoValorFila and j == ultimoValorColumna:
+                
+                ultimoValorFila=i
+                ultimoValorColumna=j
+                contradiagonal.append( matrix0[i][j])
+                ultimoValorColumna-=1
+                ultimoValorFila+=1                
+ conversorInt(contradiagonal)             
+                
+            
+
+                    
+#  list(contradiagonal)
+#  conversorInt(contradiagonal)
+
+
     
-#  promedio = acu/len(contradiagonal)
+#  promedio = acu/len(contradiagonal)s
 #  print(f"el promedio es {promedio}")
      
 def conversorInt (contradiagonal):
@@ -156,3 +202,4 @@ def conversorInt (contradiagonal):
 
 # "Modificar matriz (Debe solicitar al usuario la posición a modificar y, en caso de estar dentro de los límites de la matriz"
 # "pedir el nuevo valor numérico a guardar en dicha posición)."
+menorDiagonal(matrix0)
