@@ -202,4 +202,40 @@ def conversorInt (contradiagonal):
 
 # "Modificar matriz (Debe solicitar al usuario la posición a modificar y, en caso de estar dentro de los límites de la matriz"
 # "pedir el nuevo valor numérico a guardar en dicha posición)."
-menorDiagonal(matrix0)
+# menorDiagonal(matrix0)
+
+
+
+def FilaCeros (matrix0):
+    
+
+    FilaMod= int(input("Ingrese la fila que quiere modificar"))
+    #Sobrescribir fila con ceros (esto debe solicitar al usuario cual fila quiere modificar y 
+    #debe reemplazar todos los valores de esa fila con 0)
+    for i in range (0,len(matrix0)):
+        for j in range(0,len(matrix0[0])):
+            if i == FilaMod:
+                ValorCero = 0
+                matrix0[i][j] = ValorCero
+
+    print(matrix0)
+
+#Sobrescribir columna con -1 (esto debe solicitar al usuario cual columna quiere modificar
+#y debe reemplazar todos los valores de esa columna con -1)
+
+def ColumnaMenos (matrix0):
+    FilaCol= int(input("Ingrese la columna que quiere modificar"))
+    #Sobrescribir fila con ceros (esto debe solicitar al usuario cual fila quiere modificar y 
+    #debe reemplazar todos los valores de esa fila con 0)
+    for i in range (0,len(matrix0)):
+        for j in range(0,len(matrix0[0])):
+            if j == FilaCol:
+                ValorCero = -1
+                matrix0[i][j] = ValorCero
+
+    print(matrix0)
+
+
+
+rndma = MatrizRandom(matrix0)
+ColumnaMenos(rndma)

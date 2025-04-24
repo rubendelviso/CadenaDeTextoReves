@@ -17,3 +17,8 @@ def menu ():
         
     return dec 
     
+
+#Sobrescribir fila con ceros (esto debe solicitar al usuario cual fila quiere modificar y 
+# debe reemplazar todos los valores de esa fila con 0)
+#Sobrescribir columna con -1 (esto debe solicitar al usuario cual columna quiere modificar
+#y debe reemplazar todos los valores de esa columna con -1)
